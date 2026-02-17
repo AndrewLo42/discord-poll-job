@@ -57,7 +57,7 @@ async function sendPoll() {
             { poll_media: { text: "Sunday" } }
           ],
           duration: 48,
-          allow_multiselect: false
+          allow_multiselect: true
         }
       })
     }
