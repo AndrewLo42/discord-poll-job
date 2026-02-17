@@ -1,0 +1,9 @@
+{
+  "name": "hangout-bot",
+  "version": "1.0.0",
+  "description": "Weekly Discord hangout poll via GitHub Actions",
+  "type": "module",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
