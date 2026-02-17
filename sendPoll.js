@@ -33,7 +33,6 @@ async function sendPoll() {
   }
 
   const weekRange = getWeekRange();
-
   const response = await fetch(
     `https://discord.com/api/v10/channels/${channelId}/messages`,
     {
@@ -43,20 +42,22 @@ async function sendPoll() {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        content: `📅 **Hangout Poll (${weekRange})**`,
+        content: `📅 **Gaming Poll (${weekRange})**`,
         poll: {
-          question: { text: "Which day should we hang out?" },
+          question: {
+            text: "When are we gathering Magic?"
+          },
           answers: [
-            { text: "Monday" },
-            { text: "Tuesday" },
-            { text: "Wednesday" },
-            { text: "Thursday" },
-            { text: "Friday" },
-            { text: "Saturday" },
-            { text: "Sunday" }
+            { poll_media: { text: "Monday" } },
+            { poll_media: { text: "Tuesday" } },
+            { poll_media: { text: "Wednesday" } },
+            { poll_media: { text: "Thursday" } },
+            { poll_media: { text: "Friday" } },
+            { poll_media: { text: "Saturday" } },
+            { poll_media: { text: "Sunday" } }
           ],
-          duration: 24,
-          allowMultiselect: false
+          duration: 48,
+          allow_multiselect: false
         }
       })
     }
