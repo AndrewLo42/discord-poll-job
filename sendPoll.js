@@ -19,7 +19,7 @@ function getWeekRange() {
   sunday.setDate(pacificNow.getDate() - dayOfWeek);
 
   const saturday = new Date(sunday);
-  saturday.setDate(sunday.getDate() + 6);
+  saturday.setDate(sunday.getDate() + 7); //changed from 6 to 7 to account for full week
 
   return `${pacificFormatter.format(sunday)} – ${pacificFormatter.format(saturday)}`;
 }
@@ -42,10 +42,10 @@ async function sendPoll() {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        content: `📅 **Gaming Poll (${weekRange})**`,
+        content: `🗓️ **Gaming Poll (${weekRange})**`,
         poll: {
           question: {
-            text: "When are we gathering Magic?"
+            text: "✨ When are we gathering ✨?"
           },
           answers: [
             { poll_media: { text: "Monday" } },
