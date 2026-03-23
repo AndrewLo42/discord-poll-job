@@ -5,3 +5,5 @@
 ## Potential To Do
 - Assign roles for people who voted for the day that won and ping them the day of?
 - Create a calendar invite link of some sort, but maybe that's too extra lol
+- Send a message on the day that won according to poll?
+-- Would require a way to set up a new action
